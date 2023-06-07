@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_06_07_130906) do
+ActiveRecord::Schema[7.0].define(version: 2023_06_07_143630) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -20,11 +20,11 @@ ActiveRecord::Schema[7.0].define(version: 2023_06_07_130906) do
     t.integer "ral"
     t.integer "contenu"
     t.string "contenu_unit"
-    t.integer "ean"
+    t.bigint "ean"
     t.integer "cdt"
     t.float "public_price"
     t.float "unit_price"
-    t.integer "stock"
+    t.bigint "stock"
     t.string "datasheet"
     t.string "msds"
     t.datetime "created_at", null: false
