@@ -77,3 +77,4 @@ group :test do
 end
 
 gem "roo", "~> 2.10"
+gem 'activerecord-import'

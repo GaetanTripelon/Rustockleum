@@ -1,0 +1,7 @@
+<h1>Rustockleum Datas</h1>
+<% @products.each do |product| %>
+  <p><%= link_to product.reference, product_path(product) %>
+  <%= product.libelle %>
+  <%= product.public_price %>€/<%= product.unit_price %></p>
+  <br>
+<% end %>

@@ -9,18 +9,22 @@ namespace :import do
       record = sheet.row(row)
       product = Product.create(
         reference: record[0],
-        description: record[1],
-        contenu: record[2],
-        contenu_unit: record[3],
-        ean: record[4],
-        cdt: record[5],
-        public_price: record[6],
-        unit_price: record[7],
-        stock: record[8],
-        datasheet: record[9],
-        msds: record[10]
+        libelle: record[1],
+        description: record[2],
+        contenu: record[3],
+        contenu_unit: record[4],
+        ean: record[5],
+        cdt: record[6],
+        public_price: record[7],
+        unit_price: record[8],
+        catalogue: record[9],
+        gamme: record[10],
+        stock: record[11],
+        datasheet: record[12],
+        safetysheet: record[13]
       )
       puts product.reference
+      puts product.libelle
       puts product.description
       puts product.contenu
       puts product.contenu_unit
@@ -28,9 +32,11 @@ namespace :import do
       puts product.cdt
       puts product.public_price
       puts product.unit_price
+      puts product.catalogue
+      puts product.gamme
       puts product.stock
       puts product.datasheet
-      puts product.msds
+      puts product.safetysheet
     end
   end
 end
