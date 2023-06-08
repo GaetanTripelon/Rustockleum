@@ -1,0 +1,14 @@
+<h1><%= @product.reference %></h1>
+<h2>Catalogue <%= @product.catalogue %></h2>
+<h3>Gamme <%= @product.gamme %></h3>
+<h4>Description :</h4>
+<p><%= @product.description %></p>
+<h4>Contenu :</h4>
+<p><%= @product.contenu %><%= @product.contenu_unit %></p>
+<h4>EAN :</h4>
+<p><%= @product.ean %></p>
+<h4>Conditionnement :</h4>
+<p>Carton de <%= @product.cdt %> pièces</p>
+<h4>Prix public :</h4>
+<p><%= @product.public_price %> €/<%= @product.unit_price %></p>
+<a><%= link_to 'Back to products list', products_path, class: "btn btn-secondary" %></a>
