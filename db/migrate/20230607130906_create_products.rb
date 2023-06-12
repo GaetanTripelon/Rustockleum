@@ -2,6 +2,7 @@ class CreateProducts < ActiveRecord::Migration[7.0]
   def change
     create_table :products do |t|
       t.string :reference
+      t.text :libelle
       t.text :description
       t.integer :contenu
       t.string :contenu_unit
@@ -9,6 +10,8 @@ class CreateProducts < ActiveRecord::Migration[7.0]
       t.integer :cdt
       t.float :public_price
       t.string :unit_price
+      t.string :catalogue
+      t.string :gamme
       t.integer :stock
       t.string :datasheet
       t.string :safetysheet
