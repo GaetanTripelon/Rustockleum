@@ -1,4 +1,7 @@
 class ProductsController < ApplicationController
+  require "open-uri"
+  require "nokogiri"
+
   def index
     @products = Product.all
     if params[:query].present?
@@ -8,7 +11,7 @@ class ProductsController < ApplicationController
         OR products.catalogue @@ :query
         OR products.gamme @@ :query
       SQL
-      @products = @products.joins(:director).where(sql_subquery, query: params[:query])
+      @products = @products.where(sql_subquery, query: params[:query])
     end
   end
 

@@ -78,3 +78,6 @@ end
 
 gem "roo", "~> 2.10"
 gem 'activerecord-import'
+gem "elasticsearch"
+gem "searchkick"
+gem "algoliasearch-rails"
